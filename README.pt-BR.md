@@ -2,12 +2,14 @@
 
 ## Índice
 
-* [1. Nómada](#1-nómada)
-* [2. Investigacion UX](#2-investigación-ux)
-* [2.1 Usuarios](#2.1-usuarios)
-* [2.2 Problemática y solución](#2.2-problemática-y-solución)
-* [2.3 Historias de usuario](#2.3-historias-de-usuario)
-* [2.4 Proceso de prototipado](#2.4-proceso-de-prototipado)
+- [**Nómada**](#nómada)
+  - [Índice](#índice)
+  - [1. Nómada](#1-nómada)
+  - [2. Investigación UX](#2-investigación-ux)
+    - [2.1 Usuarios](#21-usuarios)
+    - [2.2 Problemática y solución](#22-problemática-y-solución)
+    - [2.3 Historias de usuario](#23-historias-de-usuario)
+    - [2.4 Proceso de prototipado](#24-proceso-de-prototipado)
 
 ***
 
