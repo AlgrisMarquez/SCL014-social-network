@@ -31,3 +31,4 @@ const mypostPlantilla = `
 </div>
 `;
 export {mypostPlantilla};
+
