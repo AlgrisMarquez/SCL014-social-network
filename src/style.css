@@ -72,7 +72,13 @@ h2 {
     margin: 0.5rem 0 0.5rem 1rem;
     font-size: 0.9rem;
 }
-
+h3 {
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 1rem;
+    font-size: 1rem; 
+}
 h4 {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -144,11 +150,24 @@ a {
     box-sizing: border-box;
     margin: 0;
     padding: 1rem;
+    align-items: center;
 }
-
+.hidden {
+    visibility: hidden;
+}
+.search-name {
+    width: 50%;
+    border: solid 1px #2979FF;
+    border-radius: 5px;
+    color: #4F4F4F;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding:.2rem;
+}
 .lupa {
-    margin-left: 1rem;
-    margin-right: 2rem;
+    margin-left: .5rem;
+    margin-right: 1rem;
     color: #4F4F4F;
     font-size: 1.4rem;
 }
@@ -162,7 +181,7 @@ a {
     align-items: center;
     width:35%;
     margin-left:auto;
-    padding: .8rem;
+    padding: .3rem;
 }
 .signout>span {
     font-family: 'roboto';
@@ -254,12 +273,20 @@ input[type="file"] {
 .disabled {
     opacity:50%
 }
+
+.load {
+    color: green;
+    margin: 0 0 0 .4rem;
+    font-size: 1rem;
+}
+
+
 /*logo de las secciones de la app */
 
 .logo {
-    margin-right: 40%;
+    margin-right: 5%;
     width: 35%;
-    height: auto;
+    height: 25px;
 }
 
 
@@ -404,6 +431,7 @@ button {
     overflow-y: scroll; 
     box-sizing: border-box;
     padding: 1.5rem;
+    margin-bottom: 10%;
 }
 
 #container-post::-webkit-scrollbar {
@@ -427,7 +455,7 @@ button {
     /*overflow: hidden;*/
     background: #C5E0EF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 #post-note div {
     display: flex;
@@ -482,7 +510,7 @@ button {
 .edit-input{
     border: solid 1.5px #ffffff;
     border-radius: 8px;
-    width: 90%;
+    min-width: 200px;
     margin: auto 0 auto 0;
     text-align: center;
     padding: .5rem;
@@ -499,7 +527,38 @@ button {
     font-size: 1rem;
     margin: auto 0 auto 2%;
 }
-
+.delete-btn {
+    width: 35%;
+    height: 28px;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin: auto auto auto 10%;
+}
+.close-btn {
+    width: 35%;
+    height: 28px;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin: auto;
+}
+.modal-reminder{   
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+    margin-top: 95%;
+    margin-bottom: 5%;
+}
 /*destinos destacados */
 #contenedor {
     margin-bottom: 11%;
@@ -613,17 +672,16 @@ button {
     height: auto;
     box-sizing: border-box;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: .2rem auto .2rem auto;
+    justify-content: flex-start;
+    margin: .2rem auto .2rem .5rem;
     display: flex;
     align-self:auto;
-    padding: 0.4rem;
 }
 #titulo-interes {
     width: auto;
     height: auto;
     padding: .5rem; 
-    margin: auto;
+    margin: 0 0 0 .5rem;
     display: flex;
     background: #C5E0EF;
     color: #004ECB;
@@ -651,7 +709,7 @@ button {
     height: 4em;
     border-radius: 50%;
     border: solid #ffff 2px;
-    margin: .2rem auto .2rem auto;
+    margin: 0 0 0 .5rem;
     display: flex;
 }
 #container-mypost{
@@ -667,7 +725,9 @@ button {
     display: flex;
     width: 100%;
     margin:auto;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: .3rem;
 }
 #mypost-note{
     display: flex;
@@ -678,7 +738,7 @@ button {
     flex-wrap: wrap;
     background: #C5E0EF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 0.5rem;
+    margin: 1rem;
 }
 .img-mypost{
     margin: 2.5%;
@@ -701,6 +761,22 @@ button {
     display : none;
 }
 
+.modal-edit{   
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+.edit-profile>span {
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin:auto 0 auto 0;
+    color:#4F4F4F;
+}
 /* Desktop */
 @media screen and (min-width: 700px) and (max-width: 1600px) {
         .body {
@@ -768,6 +844,14 @@ button {
             cursor: pointer;
             color: #4F4F4F;       
         }
+        #sign-wrong-password>span{
+            font-family: 'Roboto';
+            color: #4f4f4f;
+        }
+        #sign-email-not-found>span{
+            font-family: 'Roboto';
+            color: #4f4f4f;
+        }
         h4 {
             color: #4F4F4F;
             font-family: 'Roboto', sans-serif;
@@ -789,6 +873,22 @@ button {
             height: auto;
             margin: 6% 5% 4% 65%;    
         }
+        .modal-edit{   
+            background-color: #FEFEFE;
+            margin: auto auto auto 29.5%;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            width: 30%;
+            height: auto;            
+        }
+        .modal-reminder{   
+            background-color: #FEFEFE;
+            margin: 25% auto auto 29.5%;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            width: 30%;
+            height: auto;            
+        }
         fieldset {
             background-color: #EDEDED;
             border-radius: 1rem;
@@ -807,9 +907,9 @@ button {
             font-size: 28px;
             font-weight: bold;
         }
-        .logo {
-            margin: auto;
-            width: 15%;
+        .logo {            
+            margin: auto auto auto 0; 
+            width: 11%;
             height: auto;
         }
         .close-modal:hover,
@@ -830,9 +930,9 @@ button {
         }
         #wall {
             width: 38%;
-            margin: 5% auto auto auto;
+            margin: 0% auto auto auto;
             position: fixed;
-            left: 30%;
+            left: 25%;
         }
         .public {       
             width: 90%;
@@ -841,39 +941,30 @@ button {
         }
         #container-post {
             width: 40%;
-            margin: 13% auto 1% 30%;
-            max-height: 480px;
+            margin: 7% auto 1% 25%;
+            max-height: 580px;
             display: inline-grid;
-            scroll-snap-align: end;          
-            /*height: 520px;*/        
+            scroll-snap-align: end;    
             scroll-padding-top: 5%;
-            padding: 0;        
-            /*padding: 0.5rem 8rem 0.5rem 8rem;*/
+            padding: 0;
         }
         #post-note{
-            border-radius: 7px;
+            border-radius: 7px;            
         }
         #post-note div {        
             padding: .3rem 0rem 0rem 0rem; 
         }
-        .container-left {
-            display: inline-grid;
-            width: 27%;
-            margin: 1% auto auto auto;
-            left: 0;
-            position: fixed;
-            padding-left: .5rem;
-        }
+       
         .container-right {
             display: inline-grid;
             width: 27%;
-            margin: 1% auto auto auto;
+            margin: 1% auto 1% auto;
             position: fixed;
-            right: 0;
+            right: 5%           
         }
-        /* barra inferior */
+        /* barra inferior*/
         #barra {
-        display: block;
+        display: none;
         width: 100%;
         background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
         transform: rotate(180deg);
@@ -881,8 +972,7 @@ button {
         #barra span>i {
             display: none;
         }
-        .head {
-            /* position: fixed; */
+        .head {            
             top: 0;
             padding: 0.5rem;
         }
@@ -890,7 +980,7 @@ button {
             align-items: flex-end;
             width: 12%;
             margin-left: auto;
-            padding: .1rem;
+            padding: .2rem;
         }
         .button2 {       
             margin: 0 auto auto auto;
@@ -905,7 +995,7 @@ button {
         #destinos{
             display: inline-block;
             flex-direction: column;
-            height: 440px;
+            height: 490px;
             overflow-y: scroll;
             scroll-padding-top: 10%;
             scroll-snap-align: start;
@@ -921,13 +1011,11 @@ button {
         #info-viajero{
             display: block;
         }
-       
         .img-cuadrada{            
             border-radius: 7px;
             width: 90%;
             max-height: 360px;
             object-fit: cover;
-            
         }
         .user-name {            
             font-size: 1.2rem;           
@@ -970,11 +1058,56 @@ button {
             height: auto;
             display: grid;
             line-height: 1.5rem;
-            margin: 7% auto 7% auto;
+            margin: 1% auto 1% auto;
         }
         h2 {
             text-align: center;
             margin: 0.8rem 0 0.8rem 1rem;
             font-size: 1rem;
         }
-    }
+        .edit-input{            
+            min-width: 350px;
+            
+        }
+        #my-modal-profile {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.52);
+            transition: opacity .15s linear;
+        }
+        .modal-content-profile {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            width: 40%;
+            height: auto;
+            margin: 1% auto 5% 25%;            
+        }
+        #mypost-note {            
+            width: 40%;                  
+                       
+        }
+        #boxmypost {
+            box-sizing: border-box;
+            justify-content: flex-start; 
+            padding-left: 3rem;
+        }
+        #mostrar-amigos {
+            justify-content: center;
+        }
+        #boxdeinteres {
+            justify-content: center;
+        }
+        .signout>span:hover {           
+            color: #2979FF;
+        }        
+        
+}
